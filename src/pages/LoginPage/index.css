@@ -1,0 +1,111 @@
+.login-page-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.9); /* semi-transparent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: opacity 0.6s ease;
+}
+
+.login-page-container {
+  position: relative;
+  height: 100vh;
+  margin: 10px 20px;
+}
+
+.right-door,
+.left-door {
+  height: 48%;
+  width: 100%;
+  display: flex;
+  border: 2px solid #002855;
+}
+
+.top-login-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animate-right {
+  animation: moveUpFadeOut 2s forwards;
+}
+
+.animate-left {
+  animation: moveDownFadeOut 2s forwards;
+}
+
+.animate-top {
+  animation: spinFadeOut 2s forwards;
+  transform-origin: center center;
+}
+
+/* Keyframes */
+@keyframes moveUpFadeOut {
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes moveDownFadeOut {
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes spinFadeOut {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .animate-right {
+    animation: moveRightFadeOut 2s forwards;
+  }
+
+  .animate-left {
+    animation: moveLeftFadeOut 2s forwards;
+  }
+
+  .login-page-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .right-door,
+  .left-door {
+    height: 90vh;
+  }
+}
+
+@keyframes moveRightFadeOut {
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes moveLeftFadeOut {
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .login-page-container {
+    width: 100%;
+  }
+}

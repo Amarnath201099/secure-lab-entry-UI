@@ -1,0 +1,42 @@
+.timer-container {
+  margin: 0px;
+}
+
+.timer-bar-background {
+  width: 100%;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.timer-bar-fill {
+  height: 100%;
+  background-color: #0466c8;
+  transition: width 1s linear;
+}
+
+.timer-error-msg {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  color: #d00000;
+  text-align: center;
+}
+
+.timer-container h3 {
+  color: #0353a4;
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .timer-error-msg {
+    font-size: 35px;
+  }
+
+  .timer-container h3 {
+    font-size: 25px;
+    margin: 15px 0px;
+  }
+}

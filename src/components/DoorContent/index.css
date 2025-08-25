@@ -1,0 +1,63 @@
+.door-container {
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-family: "Inter", sans-serif;
+  width: 100%;
+}
+
+.right {
+  top: 0;
+}
+
+.left {
+  margin-top: auto;
+  margin-bottom: 10px;
+}
+
+.door-right-heading {
+  color: #0353a4;
+  margin: 5px 0px;
+  font-size: 20px;
+}
+
+.door-right-description {
+  color: #33415c;
+  font-size: 14px;
+  margin: 5px;
+}
+
+.door-right-list {
+  margin: 5px;
+}
+
+.door-right-list li {
+  color: #33415c;
+  font-size: 14px;
+  margin: 2px;
+}
+
+@media screen and (min-width: 1024px) {
+  .door-container {
+    padding: 60px 40px;
+  }
+
+  .door-right-heading {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+
+  .door-right-description {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .door-right-list li {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .left {
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+}
