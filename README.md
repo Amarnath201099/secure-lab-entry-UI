@@ -105,7 +105,7 @@ App will be running on: http://localhost:3000
 
 ## 🔗 Live Demo
 
-You can explore the project here: [🚀 Coder's Lab Live on Vercel](https://your-project-name.vercel.app)
+You can explore the project here: [🚀 Coder's Lab Live on Vercel](https://secure-lab-entry-ui.vercel.app/)
 
 ---
 
@@ -178,8 +178,6 @@ In a production environment:
 - [React Icons](https://react-icons.github.io/react-icons/)
 - [React Toastify](https://fkhadra.github.io/react-toastify/)
 - [JS Cookie](https://github.com/js-cookie/js-cookie)
-
----
 
 ---
 
