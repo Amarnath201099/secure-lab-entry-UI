@@ -1,70 +1,200 @@
-# Getting Started with Create React App
+# 🧪 Coder's Lab
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to **Coder's Lab**, a simple interactive web app built with React, designed for learners to explore a series of web development lab courses. This application includes a login interface, animated transitions, a countdown timer for session control, and a logout mechanism.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📁 Folder Structure
 
-### `npm start`
+```
+/src
+│
+├── components
+│ ├── CountdownTimer
+│ │ ├── index.js
+│ │ └── index.css
+│ ├── LoginForm
+│ │ ├── index.js
+│ │ └── index.css
+│ └── DoorContent
+│   ├── index.js
+│   └── index.css
+│
+├── context
+│ └── AuthContext.js
+│
+├── pages
+│ ├── LoginPage
+│ │ ├── index.js
+│ │ └── index.css
+│ └── LabPage
+│   ├── index.js
+│   └── index.css
+│
+├── App.js
+├── App.css
+└── index.js
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Features
 
-### `npm test`
+### ✅ Authentication
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Simple password-based login.
+- Auth state managed using `React Context` and cookies (`js-cookie`).
+- Session persists with local storage.
 
-### `npm run build`
+### ⏱️ Countdown Timer
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- 1-minute countdown timer (configurable).
+- Timer persists across page reloads.
+- When the timer ends, login is disabled.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 💻 Lab Page
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Displays a set of technology-based lab cards using React Icons.
+- Countdown timer visible during active session.
+- Logout button that clears session.
 
-### `npm run eject`
+### 🔐 Login Page
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Features animated "doors" and login form.
+- Animations differ based on screen size (responsive).
+- Login form becomes inaccessible after timer expires.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## ⚙️ Tech Stack
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **React**
+- **React Icons**
+- **React Context API**
+- **React Toastify**
+- **JS Cookie**
+- **CSS Animations**
+- **LocalStorage + Cookies**
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🧑‍💻 Getting Started
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 1. Clone the Repository
 
-### Code Splitting
+```bash
+git clone https://github.com/Amarnath201099/secure-lab-entry-UI.git
+cd secure-lab-entry-UI
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 2. Install Dependencies
 
-### Analyzing the Bundle Size
+```
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 3. Run the App
 
-### Making a Progressive Web App
+```
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+App will be running on: http://localhost:3000
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🔗 Live Demo
 
-### Deployment
+You can explore the project here: [🚀 Coder's Lab Live on Vercel](https://your-project-name.vercel.app)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 🔐 Login Credentials
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+| **Username** | **Password** |
+| ------------ | ------------ |
+| `Coder101`   | `1234`       |
+
+---
+
+⚠️ **Login Timer Notice**
+
+- The login system is currently set with a **1-minute timer** (for testing/demo purposes).
+- Once the timer expires, **login is disabled** until you follow the reset timer procedure below.
+
+---
+
+## 🛠️ Resetting the Timer (For Access Again)
+
+To regain access follow these steps:
+
+1. **Open Developer Tools**:
+   - Right-click anywhere on the page and select **Inspect**, or press `F12`.
+2. Navigate to the **Application** tab.
+3. In the left sidebar, go to **Local Storage**.
+4. Select the entry that matches your **website URL**.
+5. Locate and **delete the key** named: `timerTimeLeft`.
+6. **Refresh the page** to restore login access.
+
+---
+
+## 💡 Future Enhancement (Suggestion)
+
+In a production environment:
+
+- Timer values can be stored in a **backend database**.
+- Admins can be given permissions to **reset or extend access** via an admin panel or dashboard.
+- This ensures more secure and centralized control over login access, especially in time-restricted sessions.
+
+---
+
+## 🎨 Animations
+
+- `left-door`, `right-door`, and `login-form` animate out on **successful login**.
+- Responsive transitions vary between **mobile and desktop** using **media queries**.
+
+---
+
+## 📦 Dependencies
+
+- `react`
+- `react-dom`
+- `react-icons`
+- `react-toastify`
+- `js-cookie`
+
+---
+
+## 📌 Notes
+
+- ✅ **Mobile-first responsive design**
+- 🧩 **Modular codebase**: Organized into components and pages.
+- ⏳ **Countdown timer logic** is maintained in a **global context** for centralized state management.
+
+---
+
+## 🙌 Acknowledgements
+
+- [React Icons](https://react-icons.github.io/react-icons/)
+- [React Toastify](https://fkhadra.github.io/react-toastify/)
+- [JS Cookie](https://github.com/js-cookie/js-cookie)
+
+---
+
+---
+
+## 👨‍💻 Author
+
+Developed and maintained by **Amarnath Racha**  
+📫 **Contact:** [amarnath201099@gmail.com]
+
+---
+
+## 💡 Feedback & Suggestions
+
+I’m always looking to improve and expand this project.  
+If you have any feedback, suggestions, or feature requests, feel free to get in touch via email.
+
+Your insights are highly appreciated and can help shape future updates.
+
+---

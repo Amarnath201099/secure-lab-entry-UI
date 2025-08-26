@@ -3,7 +3,7 @@ import Cookies from "js-cookie";
 
 const AuthContext = createContext();
 
-const TOTAL_TIME = 0.2 * 60;
+const TOTAL_TIME = 1 * 60;
 const LOCAL_STORAGE_KEY = "timerTimeLeft";
 
 export const AuthProvider = ({ children }) => {
@@ -44,7 +44,10 @@ export const AuthProvider = ({ children }) => {
     const timer = setInterval(() => {
       setTimeLeft((prev) => {
         if (prev <= 1) {
-          setTimerExpired(true); // <-- trigger state when timer ends
+          setTimerExpired(true);
+          Cookies.remove("jwt_token");
+          setShouldAnimate(false);
+          setIsLoggedIn(false);
           return 0;
         }
         return prev - 1;
